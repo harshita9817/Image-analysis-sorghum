@@ -1,0 +1,6 @@
+#run this on the terminal to craete the plink files 
+plink --vcf SAP.vcf --make-bed --out SAP
+
+#calculate effective markers
+ml java/19
+java -Xmx100g -jar gec.jar --effect-number --plink-binary SAP --genome --out SAP
